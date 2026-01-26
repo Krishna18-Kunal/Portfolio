@@ -1,6 +1,3 @@
-/* ==================================================
-   RESET & BASE
-================================================== */
 * {
     margin: 0;
     padding: 0;
@@ -18,9 +15,7 @@ body {
     line-height: 1.6;
 }
 
-/* ==================================================
-   GLOBAL STYLES
-================================================== */
+/* ===================== STYLES====================*/
 section {
     padding: 70px 10%;
 }
@@ -36,9 +31,7 @@ p {
     color: #cbd5f5;
 }
 
-/* ==================================================
-   BUTTONS
-================================================== */
+/* ======================BUTTONS==================== */
 .btn,
 .project-btn,
 .dash-btn {
@@ -69,10 +62,8 @@ p {
     color: #020617;
 }
 
-/* ==================================================
-                HERO SECTION
-================================================== */
-/* ================= HERO SECTION ================= */
+/* ======================HERO SECTION===================*/
+
 .hero {
     min-height: 100vh;
     display: flex;
@@ -171,9 +162,7 @@ p {
     }
 }
 
-/* ==================================================
-   ABOUT
-================================================== */
+/* =====================ABOUT====================== */
 .about p {
     max-width: 800px;
     margin: auto;
@@ -181,9 +170,7 @@ p {
     font-size: 1.05rem;
 }
 
-/* ==================================================
-   SKILLS
-================================================== */
+/* ======================SKILLS===================== */
 .skills {
     padding: 60px 8%;
 }
@@ -201,7 +188,7 @@ p {
 
 
 .skill-card {
-    background: #020617;
+    background: #030717;
     padding: 25px;
     border-radius: 16px;
     text-align: center;
@@ -225,9 +212,7 @@ p {
 }
 
 
-/* ==================================================
-   ACHIEVEMENTS
-================================================== */
+/* =====================ACHIEVEMENTS========== */
 .achievements {
     background: #020617;
 }
@@ -256,9 +241,7 @@ p {
     box-shadow: 0 15px 35px rgba(56, 189, 248, 0.25);
 }
 
-/* ==================================================
-   PROJECTS
-================================================== */
+/* =======================PROJECTS=====================*/
 .project-grid,
 .featured-projects-grid {
     display: grid;
@@ -293,17 +276,17 @@ p {
     color: #94a3b8;
 }
 
-/* ==================================================
-   DASHBOARD SHOWCASE
-================================================== */
+
+/* ================= DASHBOARD SHOWCASE ================= */
 .dashboard-showcase {
-    position: relative;
+    margin-top: 80px;
 }
 
 .dashboard-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
     gap: 30px;
+    align-items: stretch;
 }
 
 .dashboard-card {
@@ -313,6 +296,10 @@ p {
     overflow: hidden;
     border: 1px solid rgba(56, 189, 248, 0.15);
     transition: transform 0.4s ease, box-shadow 0.4s ease;
+
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .dashboard-card:hover {
@@ -320,12 +307,9 @@ p {
     box-shadow: 0 20px 45px rgba(56, 189, 248, 0.25);
 }
 
-
 .dashboard-preview {
     height: 180px;
     background: linear-gradient(135deg, #1e293b, #020617);
-    display: flex;
-    align-items: flex-start;
     padding: 15px;
 }
 
@@ -340,7 +324,6 @@ p {
     padding: 6px 14px;
     border-radius: 20px;
     font-size: 0.75rem;
-    font-weight: 500;
 }
 
 .badge.ui {
@@ -348,9 +331,11 @@ p {
     color: #a855f7;
 }
 
-
 .dashboard-content {
     padding: 22px;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
 }
 
 .dashboard-content h3 {
@@ -359,42 +344,80 @@ p {
 }
 
 .dashboard-content p {
+    color: #cbd5f5;
     font-size: 0.95rem;
     margin-bottom: 12px;
-    color: #cbd5f5;
 }
 
 .tools {
-    display: inline-block;
     font-size: 0.85rem;
     color: #94a3b8;
     margin-bottom: 15px;
 }
 
-
 .dashboard-actions {
-    margin-top: 10px;
+    margin-top: auto;
+    padding-bottom: 20px;
 }
 
 .dash-btn {
-    display: inline-block;
-    padding: 10px 20px;
+    padding: 10px 22px;
     border-radius: 22px;
-    font-size: 0.85rem;
-    text-decoration: none;
     background: #38bdf8;
     color: #020617;
+    font-size: 0.85rem;
+    text-decoration: none;
     font-weight: 500;
     transition: all 0.3s ease;
 }
 
-.dash-btn:hover {
-    background: #0ea5e9;
+
+.featured-card {
+    grid-column: 1 / -1;      
+    display: flex;
+    justify-content: center; 
 }
 
-/* ==================================================
-   EXPERIENCE & EDUCATION
-================================================== */
+.featured-card .dashboard-card {
+    width: 100%;
+    max-width: 360px;        
+}
+
+
+.more-projects {
+    margin-top: 70px;
+    padding: 35px;
+    text-align: center;
+    border-radius: 22px;
+    background: rgba(2, 6, 23, 0.8);
+    border: 1px solid rgba(56, 189, 248, 0.15);
+}
+
+.more-projects h3 {
+    color: #38bdf8;
+    margin-bottom: 10px;
+}
+
+.more-projects p {
+    color: #cbd5f5;
+    margin-bottom: 22px;
+}
+
+.linkedin-btn {
+    padding: 12px 30px;
+    border-radius: 30px;
+    background: linear-gradient(135deg, #0ea5e9, #38bdf8);
+    color: #020617;
+    text-decoration: none;
+    font-weight: 600;
+    transition: 0.3s;
+}
+
+.linkedin-btn:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 35px rgba(56, 189, 248, 0.35);
+}
+/* ===================EXPERIENCE & EDUCATION=============== */
 .experience-card,
 .timeline-item {
     max-width: 900px;
@@ -405,9 +428,7 @@ p {
     border-left: 4px solid #38bdf8;
 }
 
-/* ==================================================
-   CONTACT
-================================================== */
+/* ==================CONTACT======================= */
 .contact form {
     max-width: 500px;
     margin: auto;
@@ -438,9 +459,7 @@ p {
     background: #0ea5e9;
 }
 
-/* ==================================================
-   FOOTER
-================================================== */
+/* =================FOOTER======================= */
 footer {
     background: #020617;
     text-align: center;
@@ -448,9 +467,7 @@ footer {
     font-size: 0.9rem;
 }
 
-/* ==================================================
-   ANIMATIONS & RESPONSIVE
-================================================== */
+/* ==================ANIMATIONS & RESPONSIVE================= */
 @keyframes fadeUp {
     from {
         opacity: 0;
@@ -472,4 +489,3 @@ footer {
         font-size: 2.2rem;
     }
 }
-
